@@ -98,6 +98,7 @@ def organize_schools(schools)
 	hash = {}
 	arr = []
 	schools.each do |name,location_hash|
+		binding.pry
 		location = location_hash[:location]
 		puts "#{name}, #{location}"
 		arr << name
