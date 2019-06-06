@@ -96,19 +96,20 @@ end
 
 def organize_schools(schools)
 	hash = {}
-	arr = []
 	schools.each do |name,location_hash|
 		binding.pry
 		location = location_hash[:location]
-		puts "#{name}, #{location}"
-		arr << name
-		location_hash.each do |loc,state|
-			if hash[:location]
-				hash[state] = arr
-			else
-				hash[state] = name
-			end
-		end
+		hash[location] ||= [] #set empty array if hash doesn't have a key, otherwise just take existing key:value
+		hash[location] << name
+		
+		# arr << name
+		# location_hash.each do |loc,state|
+		# 	if hash[:location]
+		# 		hash[state] = arr
+		# 	else
+		# 		hash[state] = name
+		# 	end
+		# end
 	end
   hash
 end
