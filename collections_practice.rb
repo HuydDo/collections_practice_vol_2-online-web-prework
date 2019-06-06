@@ -101,7 +101,7 @@ def organize_schools(schools)
 		location = location_hash[:location]
 		hash[location] ||= [] #set empty array if hash doesn't have a key, otherwise just take existing key:value
 		hash[location] << name
-		
+
 		# arr << name
 		# location_hash.each do |loc,state|
 		# 	if hash[:location]
